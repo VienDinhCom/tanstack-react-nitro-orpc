@@ -5,6 +5,7 @@ dist
 .cache
 .output
 .tanstack
+.wrangler
 .env
 .env.local
 database.sqlite

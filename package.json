@@ -8,6 +8,7 @@
     "dev": "esmate task dev",
     "build": "esmate task build",
     "start": "esmate task start",
+    "deploy": "esmate task deploy",
     "test": "esmate task test",
     "check": "esmate task check",
     "fix": "esmate task fix"
@@ -54,7 +55,8 @@
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.0.5",
     "vitest": "^4.0.18",
-    "web-vitals": "^5.1.0"
+    "web-vitals": "^5.1.0",
+    "wrangler": "^4.61.1"
   },
   "tasks": {
     "dev": [
@@ -62,7 +64,8 @@
       "vite"
     ],
     "test": "vitest run",
-    "start": "vite preview",
+    "start": "wrangler --cwd dist/ pages dev",
+    "deploy": "wrangler --cwd dist/ pages deploy",
     "build": [
       "tsc --noEmit",
       "vite build"
