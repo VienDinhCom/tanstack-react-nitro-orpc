@@ -66,11 +66,11 @@
     "test": "vitest run",
     "start": [
       "wrangler d1 migrations apply tanstack-react-nitro-orpc --local",
-      "wrangler --cwd dist/ pages dev"
+      "npx wrangler --cwd .output/ dev"
     ],
     "deploy": [
       "wrangler d1 migrations apply tanstack-react-nitro-orpc",
-      "wrangler --cwd dist/ pages deploy"
+      "npx wrangler --cwd .output/ deploy"
     ],
     "build": [
       "tsc --noEmit",
