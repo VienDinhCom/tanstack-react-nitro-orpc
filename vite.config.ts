@@ -24,7 +24,7 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   nitro: {
-    preset: "cloudflare-pages",
+    preset: "cloudflare-module",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true,

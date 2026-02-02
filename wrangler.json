@@ -1,0 +1,15 @@
+{
+  "name": "tanstack-react-nitro-orpc",
+  "compatibility_date": "2024-09-26",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tanstack-react-nitro-orpc",
+      "database_id": "f1559036-f527-46ec-84ff-0b4e933b991e",
+      "migrations_dir": "src/backend/database/migrations"
+    }
+  ]
+}

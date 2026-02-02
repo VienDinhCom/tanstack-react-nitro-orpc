@@ -1,7 +1,7 @@
 import { invariant } from "@esmate/utils";
 import { z } from "zod";
 
-import { db, orm, schema } from "@/backend/database";
+import { orm, schema } from "@/backend/database";
 import { authMiddleware, os } from "@/backend/lib/orpc";
 import { TodoInsertSchema, TodoSelectSchema } from "@/shared/schema";
 
@@ -10,7 +10,7 @@ export const todo = {
     .use(authMiddleware)
     .output(z.array(TodoSelectSchema))
     .handler(async ({ context }) => {
-      return db.query.todo.findMany({ where: orm.eq(schema.todo.userId, context.user.id) });
+      return context.db.query.todo.findMany({ where: orm.eq(schema.todo.userId, context.user.id) });
     }),
 
   add: os
@@ -18,7 +18,7 @@ export const todo = {
     .input(TodoInsertSchema)
     .output(TodoSelectSchema)
     .handler(async ({ input, context }) => {
-      const [todo] = await db
+      const [todo] = await context.db
         .insert(schema.todo)
         .values({ ...input, userId: context.user.id })
         .returning();
@@ -33,7 +33,7 @@ export const todo = {
     .input(z.object({ id: z.string() }))
     .output(TodoSelectSchema)
     .handler(async ({ input, context }) => {
-      const [todo] = await db
+      const [todo] = await context.db
         .update(schema.todo)
         .set({ done: orm.not(schema.todo.done) })
         .where(orm.and(orm.eq(schema.todo.id, input.id), orm.eq(schema.todo.userId, context.user.id)))
@@ -49,7 +49,7 @@ export const todo = {
     .input(z.object({ id: z.string() }))
     .output(TodoSelectSchema)
     .handler(async ({ input, context }) => {
-      const [todo] = await db
+      const [todo] = await context.db
         .delete(schema.todo)
         .where(orm.and(orm.eq(schema.todo.id, input.id), orm.eq(schema.todo.userId, context.user.id)))
         .returning();

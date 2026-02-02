@@ -1,21 +1,25 @@
+import type { DrizzleD1Database } from "drizzle-orm/d1";
+
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
-import { db } from "@/backend/database";
+import type * as schema from "@/backend/database/schema";
 
-export const auth = betterAuth({
-  database: drizzleAdapter(db, {
-    provider: "sqlite",
-  }),
-  emailAndPassword: {
-    enabled: true,
-  },
-  rateLimit: {
-    enabled: true,
-  },
-  user: {
-    deleteUser: {
+export function createAuth(db: DrizzleD1Database<typeof schema>) {
+  return betterAuth({
+    database: drizzleAdapter(db, {
+      provider: "sqlite",
+    }),
+    emailAndPassword: {
       enabled: true,
     },
-  },
-});
+    rateLimit: {
+      enabled: true,
+    },
+    user: {
+      deleteUser: {
+        enabled: true,
+      },
+    },
+  });
+}

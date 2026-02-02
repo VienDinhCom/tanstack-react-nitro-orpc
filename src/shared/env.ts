@@ -8,7 +8,6 @@ export const env = createEnv({
   client: {},
 
   server: {
-    DB_FILE_NAME: z.string(),
     BETTER_AUTH_URL: z.url(),
     BETTER_AUTH_SECRET: z.string(),
   },
