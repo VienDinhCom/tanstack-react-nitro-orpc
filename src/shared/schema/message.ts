@@ -6,5 +6,5 @@ import { UserSelectSchema } from "./user";
 
 export const MessageSelectSchema = createSelectSchema(message);
 export const MessageSelectSchemaWithSender = MessageSelectSchema.extend({ sender: UserSelectSchema });
-export const MessageInsertSchema = createInsertSchema(message).omit({ id: true, userId: true });
+export const MessageInsertSchema = createInsertSchema(message).omit({ userId: true });
 export const MessageUpdateSchema = createUpdateSchema(message);

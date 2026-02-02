@@ -3,5 +3,5 @@ import { createInsertSchema, createSelectSchema, createUpdateSchema } from "driz
 import { todo } from "@/backend/database/schema";
 
 export const TodoSelectSchema = createSelectSchema(todo);
-export const TodoInsertSchema = createInsertSchema(todo).omit({ id: true, userId: true });
+export const TodoInsertSchema = createInsertSchema(todo).omit({ userId: true });
 export const TodoUpdateSchema = createUpdateSchema(todo);
