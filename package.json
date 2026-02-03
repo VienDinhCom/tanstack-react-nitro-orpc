@@ -1,5 +1,5 @@
 {
-  "name": "tanstack-react-nitro-orpc",
+  "name": "cloudflare-react-nitro-orpc",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -88,6 +88,6 @@
     ],
     "test": "vitest run",
     "types": "wrangler types src/backend/lib/types/cloudflare.d.ts",
-    "migrate": "wrangler d1 migrations apply tanstack-react-nitro-orpc $1"
+    "migrate": "wrangler d1 migrations apply cloudflare-react-nitro-orpc $1"
   }
 }

@@ -29,7 +29,7 @@ enhances your development workflow.
 
 Explore fully functional demo apps built with this template to see the stack in action here:
 
-https://tanstack-react-nitro-orpc.dthvien.workers.dev/
+https://cloudflare-react-nitro-orpc.dthvien.workers.dev/
 
 ### ☑️ Todo App
 

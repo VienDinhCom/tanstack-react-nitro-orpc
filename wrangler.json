@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tanstack-react-nitro-orpc",
+  "name": "cloudflare-react-nitro-orpc",
   "compatibility_date": "2025-09-02",
   "d1_databases": [
     {
       "binding": "CLOUDFLARE_D1",
-      "database_name": "tanstack-react-nitro-orpc",
-      "database_id": "270138f5-6c7a-468e-84d2-b8aa33ce301d",
+      "database_name": "cloudflare-react-nitro-orpc",
+      "database_id": "87580995-22aa-4879-9cbc-deeb9ef96eb1",
       "migrations_dir": "src/backend/database/migrations"
     }
   ],

@@ -56,7 +56,7 @@ function App() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="h-12 px-8 text-base" asChild>
               <a
-                href="https://github.com/VienDinhCom/tanstack-react-nitro-orpc"
+                href="https://github.com/VienDinhCom/cloudflare-react-nitro-orpc"
                 target="_blank"
                 rel="noopener noreferrer"
               >
