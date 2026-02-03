@@ -1,13 +1,13 @@
-# ESMate React Nitro
-
-> ✨ **Modern MERN Stack Replacement**
+# Modern MERN Stack Replacement with TanStack React, Nitro, oRPC, Drizzle, Better Auth, and shadcn/ui
 
 **A modern full-stack template with React, Nitro Server Toolkit, oRPC type-safe APIs, Drizzle ORM, Better Auth, TanStack
 Router, and beautiful UI powered by shadcn/ui.**
 
 Everything you need to ship production-ready apps.
 
-[![Get Started](https://img.shields.io/badge/Get%20Started-Blue?style=for-the-badge&logo=github)](https://github.com/VienDinhCom/esmate/tree/main/templates/react-nitro)
+## Demonstrations
+
+You can visit here to see the demo: https://tanstack-react-nitro-orpc.dthvien.workers.dev/
 
 ## 🚀 Everything You Need
 
@@ -58,7 +58,15 @@ enhances your development workflow.
     cp sample.env .env
     ```
 
-4.  **Run the development server:**
+4.  **Configure Cloudflare**
+
+    ```bash
+    npx wrangler login
+    ```
+
+    Then configure `wrangler.json` with the worker and database information.
+
+5.  **Run the development server:**
 
     ```bash
     npm run dev
@@ -72,9 +80,10 @@ enhances your development workflow.
 - `npm run dev`: Runs database migrations and starts the Nitro + Vite development environment.
 - `npm run build`: Performs type checking and creates a production build.
 - `npm run start`: Previews the production build locally.
-- `npm run test`: Runs unit tests using Vitest.
+- `npm run deploy`: Deploys the production build to the cloud.
 - `npm run fix`: Automatically fixes code formatting and linting issues.
 - `npm run check`: Checks the codebase for formatting and linting errors.
+- `npm run test`: Runs unit tests using Vitest.
 
 ## 🌍 Deploy Anywhere
 
