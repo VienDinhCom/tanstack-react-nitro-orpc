@@ -2,7 +2,6 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "tanstack-react-nitro-orpc",
   "compatibility_date": "2025-09-02",
-  "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "CLOUDFLARE_D1",
@@ -12,7 +11,6 @@
     }
   ],
   "vars": {
-    "BETTER_AUTH_SECRET": "Z3qKa4lPPNh1mP1rpoNW6kzOI412nUzYwW2a",
-    "BETTER_AUTH_URL": "https://tanstack-react-nitro-orpc.dthvien.workers.dev"
+    "AUTH_SECRET": "PLEASE_REPLACE_ME_WITH_A_RANDOM_SECRET"
   }
 }

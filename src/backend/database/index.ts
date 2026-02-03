@@ -1,9 +1,11 @@
 import { drizzle } from "drizzle-orm/d1";
 
+import type { Env } from "@/backend/lib/env";
+
 import * as schema from "./schema";
 
-export function createDb(d1: D1Database) {
-  return drizzle(d1, { schema, casing: "snake_case" });
+export function createDatabase(env: Env) {
+  return drizzle(env.CLOUDFLARE_D1, { schema, casing: "snake_case" });
 }
 
 export * as schema from "./schema";

@@ -1,20 +1,20 @@
 import type { H3Event } from "nitro/h3";
 
-import { createEnv as createEnvCore } from "@t3-oss/env-core";
 import { z } from "zod";
 
-export const EnvSchema = z.object({
-  CLOUDFLARE_D1: z.instanceof(D1Database),
-  BASE_URL: z.string().url(),
-  BETTER_AUTH_SECRET: z.string(),
-});
+export function createEnv(event: H3Event) {
+  const url = new URL(event.req.url);
+  const productionEnv = (event.runtime?.cloudflare as any)?.env;
+  const developmentEnv = (event.context?.cloudflare as any)?.env;
 
-export type Env = z.infer<typeof EnvSchema>;
-
-export function createEnv(event: H3Event): Env {
-  return createEnvCore({
-    server: EnvSchema.shape,
-    runtimeEnv: event.context.env as any,
-    emptyStringAsUndefined: true,
-  }) as unknown as Env;
+  return z
+    .object({
+      CLOUDFLARE_D1: z.any(),
+      AUTH_SECRET: z.string(),
+      BASE_URL: z.url().default(url.origin),
+    })
+    .readonly()
+    .parse(import.meta.env.MODE === "production" ? productionEnv : developmentEnv);
 }
+
+export type Env = ReturnType<typeof createEnv>;

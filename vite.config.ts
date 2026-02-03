@@ -7,7 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 8787,
   },
   plugins: [
     router({
@@ -25,9 +25,5 @@ export default defineConfig({
   ],
   nitro: {
     preset: "cloudflare-module",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-    },
   },
 });

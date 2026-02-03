@@ -64,7 +64,7 @@ enhances your development workflow.
     npm run dev
     ```
 
-    This will run migrations and start the development server. Open [http://localhost:3000](http://localhost:3000) (or
+    This will run migrations and start the development server. Open [http://localhost:8787](http://localhost:8787) (or
     the port shown in your terminal) to see the result.
 
 ## 📦 Available Scripts

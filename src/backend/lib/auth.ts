@@ -1,15 +1,16 @@
-import type { DrizzleD1Database } from "drizzle-orm/d1";
-
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
-import type * as schema from "@/backend/database/schema";
+import type { Env } from "@/backend/lib/env";
 
+import { createDatabase } from "@/backend/database";
 
-export function createAuth(db: DrizzleD1Database<typeof schema>, env: any) {
+export function createAuth(env: Env) {
+  const db = createDatabase(env);
+
   return betterAuth({
-    baseURL: env.BETTER_AUTH_URL,
-    secret: env.BETTER_AUTH_SECRET,
+    baseURL: env.BASE_URL,
+    secret: env.AUTH_SECRET,
     database: drizzleAdapter(db, {
       provider: "sqlite",
     }),
