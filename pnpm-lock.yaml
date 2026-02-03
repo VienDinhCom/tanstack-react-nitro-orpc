@@ -26,9 +26,6 @@ importers:
       '@orpc/tanstack-query':
         specifier: ^1.13.4
         version: 1.13.4(@orpc/client@1.13.4)(@tanstack/query-core@5.90.20)
-      '@t3-oss/env-core':
-        specifier: ^0.13.10
-        version: 0.13.10(typescript@5.9.3)(zod@4.3.6)
       '@tanstack/react-devtools':
         specifier: ^0.9.4
         version: 0.9.4(@types/react-dom@19.2.3(@types/react@19.2.10))(@types/react@19.2.10)(csstype@3.2.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(solid-js@1.9.11)
@@ -2529,23 +2526,6 @@ packages:
     resolution: {integrity: sha512-esgN+54+q0NjB0Y/4BomT9samII7jGwNy/2a3wNZbT2A2RpmXsXwUt24LvLhx6jUq2gVk4cWEvcRO6MFQbOfNA==}
     peerDependencies:
       acorn: ^8.9.0
-
-  '@t3-oss/env-core@0.13.10':
-    resolution: {integrity: sha512-NNFfdlJ+HmPHkLi2HKy7nwuat9SIYOxei9K10lO2YlcSObDILY7mHZNSHsieIM3A0/5OOzw/P/b+yLvPdaG52g==}
-    peerDependencies:
-      arktype: ^2.1.0
-      typescript: '>=5.0.0'
-      valibot: ^1.0.0-beta.7 || ^1.0.0
-      zod: ^3.24.0 || ^4.0.0
-    peerDependenciesMeta:
-      arktype:
-        optional: true
-      typescript:
-        optional: true
-      valibot:
-        optional: true
-      zod:
-        optional: true
 
   '@tailwindcss/node@4.1.18':
     resolution: {integrity: sha512-DoR7U1P7iYhw16qJ49fgXUlry1t4CpXeErJHnQ44JgTSKMaZUdf17cfn5mHchfJ4KRBZRFA/Coo+MUF5+gOaCQ==}
@@ -8069,11 +8049,6 @@ snapshots:
   '@sveltejs/acorn-typescript@1.0.8(acorn@8.15.0)':
     dependencies:
       acorn: 8.15.0
-
-  '@t3-oss/env-core@0.13.10(typescript@5.9.3)(zod@4.3.6)':
-    optionalDependencies:
-      typescript: 5.9.3
-      zod: 4.3.6
 
   '@tailwindcss/node@4.1.18':
     dependencies:
