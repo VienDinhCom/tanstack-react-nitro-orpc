@@ -1,7 +1,8 @@
 # Modern MERN Stack Replacement
 
-**A modern full-stack template with React, Nitro Server Toolkit, Cloudflare Workers, oRPC type-safe APIs, Drizzle ORM,
-Cloudflare D1, Better Auth, TanStack Router, and beautiful UI powered by shadcn/ui.**
+A modern MERN replacement designed for ultra-cheap, zero-ops deployment on Cloudflare—powered by React, Nitro,
+Cloudflare Workers, oRPC type-safe APIs, Drizzle ORM, Cloudflare D1, Better Auth, TanStack Router, and elegant shadcn/ui
+components.
 
 Everything you need to ship production-ready apps.
 
