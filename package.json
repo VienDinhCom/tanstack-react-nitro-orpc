@@ -60,7 +60,7 @@
   },
   "tasks": {
     "migrate": "wrangler d1 migrations apply tanstack-react-nitro-orpc $1",
-    "types": "wrangler types --env-interface CloudflareBindings",
+    "types": "wrangler types src/backend/lib/types/cloudflare.d.ts",
     "dev": [
       "esmate task types",
       "esmate task migrate --local",

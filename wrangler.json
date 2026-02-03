@@ -5,7 +5,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
-      "binding": "DB",
+      "binding": "CLOUDFLARE_D1",
       "database_name": "tanstack-react-nitro-orpc",
       "database_id": "270138f5-6c7a-468e-84d2-b8aa33ce301d",
       "migrations_dir": "src/backend/database/migrations"
