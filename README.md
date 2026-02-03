@@ -1,6 +1,6 @@
 # Modern MERN Stack Replacement
 
-A modern MERN replacement designed for ultra-cheap, zero-ops deployment on Cloudflare—powered by
+A modern MERN stack replacement designed for ultra-cheap, zero-ops deployment on Cloudflare—powered by
 [ESMate](https://github.com/VienDinhCom/esmate), React, Nitro, Cloudflare Workers, oRPC type-safe APIs, Drizzle ORM,
 Cloudflare D1, Better Auth, TanStack Router, and elegant shadcn/ui components.
 
