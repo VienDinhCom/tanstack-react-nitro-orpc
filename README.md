@@ -22,8 +22,8 @@ database management and **Better Auth** for a complete authentication solution.
 
 ### 🛠️ Developer Experience
 
-Includes **ESMate**, a modern task runner and CLI that streamlines project management, automates formatting, and
-enhances your development workflow.
+Includes [ESMate](https://github.com/VienDinhCom/esmate), a modern task runner and CLI that streamlines project
+management, automates formatting, and enhances your development workflow.
 
 ## 🎮 Demonstration
 
