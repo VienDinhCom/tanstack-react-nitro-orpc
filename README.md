@@ -1,13 +1,9 @@
-# Modern MERN Stack Replacement with TanStack React, Nitro, oRPC, Drizzle, Better Auth, and shadcn/ui
+# Modern MERN Stack Replacement
 
-**A modern full-stack template with React, Nitro Server Toolkit, oRPC type-safe APIs, Drizzle ORM, Better Auth, TanStack
-Router, and beautiful UI powered by shadcn/ui.**
+**A modern full-stack template with React, Nitro Server Toolkit, Cloudflare Workers, oRPC type-safe APIs, Drizzle ORM,
+Cloudflare D1, Better Auth, TanStack Router, and beautiful UI powered by shadcn/ui.**
 
 Everything you need to ship production-ready apps.
-
-## Demonstrations
-
-You can visit here to see the demo: https://tanstack-react-nitro-orpc.dthvien.workers.dev/
 
 ## 🚀 Everything You Need
 
@@ -27,6 +23,10 @@ database management and **Better Auth** for a complete authentication solution.
 
 Includes **ESMate**, a modern task runner and CLI that streamlines project management, automates formatting, and
 enhances your development workflow.
+
+## Demonstrations
+
+You can visit here to see the demo: https://tanstack-react-nitro-orpc.dthvien.workers.dev/
 
 ## 🛠️ Getting Started
 
