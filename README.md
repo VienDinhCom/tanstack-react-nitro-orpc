@@ -64,7 +64,7 @@ comprehensive and pre-configured foundation for building modern, type-safe full-
 2.  **Install dependencies:**
 
     ```bash
-    npm install
+    pnpm install
     ```
 
 3.  **Set up environment variables:**
@@ -86,7 +86,7 @@ comprehensive and pre-configured foundation for building modern, type-safe full-
 5.  **Run the development server:**
 
     ```bash
-    npm run dev
+    pnpm run dev
     ```
 
     This will run migrations and start the development server. Open [http://localhost:8787](http://localhost:8787) (or
@@ -94,13 +94,13 @@ comprehensive and pre-configured foundation for building modern, type-safe full-
 
 ## 📦 Available Scripts
 
-- `npm run dev`: Runs database migrations and starts the Nitro + Vite development environment.
-- `npm run build`: Performs type checking and creates a production build.
-- `npm run start`: Previews the production build locally.
-- `npm run deploy`: Deploys the production build to the cloud.
-- `npm run fix`: Automatically fixes code formatting and linting issues.
-- `npm run check`: Checks the codebase for formatting and linting errors.
-- `npm run test`: Runs unit tests using Vitest.
+- `pnpm run dev`: Runs database migrations and starts the Nitro + Vite development environment.
+- `pnpm run build`: Performs type checking and creates a production build.
+- `pnpm run start`: Previews the production build locally.
+- `pnpm run deploy`: Deploys the production build to the cloud.
+- `pnpm run fix`: Automatically fixes code formatting and linting issues.
+- `pnpm run check`: Checks the codebase for formatting and linting errors.
+- `pnpm run test`: Runs unit tests using Vitest.
 
 ## 🌍 Why Cloudflare?
 

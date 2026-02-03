@@ -6,11 +6,11 @@ safety, performance, and developer experience.
 ## Commands
 
 ```bash
-npm run dev      # Start development server (runs migrations + vite)
-npm run build    # Type-check and build for production
-npm run check    # Lint and format check
-npm run fix      # Auto-fix linting and formatting issues
-npm run test     # Run unit tests with Vitest
+pnpm run dev      # Start development server (runs migrations + vite)
+pnpm run build    # Type-check and build for production
+pnpm run check    # Lint and format check
+pnpm run fix      # Auto-fix linting and formatting issues
+pnpm run test     # Run unit tests with Vitest
 ```
 
 ## Project Knowledge
@@ -111,7 +111,7 @@ export const getMyTeams = os.handler(async ({ context }) => {
 
 ## Boundaries
 
-- ✅ **Always:** Run `npm run check` before committing, use Zod for all input/output validation, follow existing
+- ✅ **Always:** Run `pnpm run check` before committing, use Zod for all input/output validation, follow existing
   patterns
 - ⚠️ **Ask first:** Database schema changes, adding dependencies, modifying authentication logic
 - 🚫 **Never:** Commit secrets or API keys, edit `node_modules/` or generated files, bypass type checking
