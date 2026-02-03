@@ -6,7 +6,7 @@
     {
       "binding": "CLOUDFLARE_D1",
       "database_name": "cloudflare-react-nitro-orpc",
-      "database_id": "87580995-22aa-4879-9cbc-deeb9ef96eb1",
+      "database_id": "99844c06-a65c-4c06-939c-0089fdc989f9",
       "migrations_dir": "src/backend/database/migrations"
     }
   ],
