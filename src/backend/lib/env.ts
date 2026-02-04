@@ -12,6 +12,7 @@ export function createEnv(event: H3Event) {
       AUTH_SECRET: z.string(),
       BASE_URL: z.url().default(url.origin),
       CLOUDFLARE_D1: z.any(),
+      CLOUDFLARE_DO: z.any(),
     })
     .readonly()
     .parse(import.meta.env.MODE === "production" ? productionEnv : developmentEnv);

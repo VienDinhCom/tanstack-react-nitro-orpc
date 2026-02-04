@@ -1,14 +1,11 @@
 import { z } from "@esmate/shadcn/pkgs/zod";
 import { invariant } from "@esmate/utils";
-import { eventIterator, EventPublisher } from "@orpc/server";
+import { DurablePublisher } from "@orpc/experimental-publisher-durable-object";
+import { eventIterator } from "@orpc/server";
 
 import { createDatabase, orm, schema } from "@/backend/database";
 import { authMiddleware, os } from "@/backend/lib/orpc";
 import { MessageInsertSchema, MessageSelectSchema, MessageSelectSchemaWithSender } from "@/shared/schema";
-
-const publisher = new EventPublisher<{
-  sent: z.infer<typeof MessageSelectSchemaWithSender>;
-}>();
 
 export const message = {
   add: os
@@ -30,6 +27,10 @@ export const message = {
       });
 
       invariant(sender, "could not find sender");
+
+      const publisher = new DurablePublisher<{
+        sent: z.infer<typeof MessageSelectSchemaWithSender>;
+      }>(context.env.CLOUDFLARE_DO);
 
       publisher.publish("sent", {
         ...message,
@@ -57,11 +58,15 @@ export const message = {
   subscribe: os
     .use(authMiddleware)
     .output(eventIterator(MessageSelectSchemaWithSender))
-    .handler(async function* () {
+    .handler(async function* ({ context }) {
+      const publisher = new DurablePublisher<{
+        sent: z.infer<typeof MessageSelectSchemaWithSender>;
+      }>(context.env.CLOUDFLARE_DO);
+
       const iterator = publisher.subscribe("sent");
 
       for await (const message of iterator) {
-        yield message;
+        yield message as any;
       }
     }),
 };

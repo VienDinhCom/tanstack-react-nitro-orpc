@@ -2,6 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cloudflare-react-nitro-orpc",
   "compatibility_date": "2025-09-02",
+  "compatibility_flags": ["enable_request_signal"],
+  "vars": {
+    "AUTH_SECRET": "PLEASE_REPLACE_ME_WITH_A_RANDOM_SECRET"
+  },
   "d1_databases": [
     {
       "binding": "CLOUDFLARE_D1",
@@ -10,7 +14,18 @@
       "migrations_dir": "src/backend/database/migrations"
     }
   ],
-  "vars": {
-    "AUTH_SECRET": "PLEASE_REPLACE_ME_WITH_A_RANDOM_SECRET"
-  }
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CLOUDFLARE_D0",
+        "class_name": "CloudflareDO"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "new_sqlite_classes": ["CloudflareDO"],
+      "tag": "v1"
+    }
+  ]
 }
